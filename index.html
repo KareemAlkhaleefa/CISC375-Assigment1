@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Royal Game: Chess, History, Masters &amp; Strategy</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- EMBEDDED STYLE: Index-page-specific component styles -->
+    <style>
+      /* Styled callout box for chess facts — used only on this page */
+      .chess-fact-box {
+        background-color: #0d1b2a;
+        color: #f5f0e8;
+        border-left: 4px solid #c9a84c;
+        padding: 1.35rem 1.6rem;
+        margin: 1.75rem 0;
+        font-style: italic;
+        font-size: 0.94rem;
+        line-height: 1.75;
+      }
+
+      .chess-fact-box .fact-label {
+        display: block;
+        color: #c9a84c;
+        font-style: normal;
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        margin-bottom: 0.55rem;
+      }
+
+      /* Highlighted peak rating badge */
+      .rating-badge {
+        display: inline-block;
+        background-color: #c9a84c;
+        color: #0d1b2a;
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 900;
+        padding: 0.15rem 0.65rem;
+        font-size: 0.85rem;
+        margin-left: 0.4rem;
+        vertical-align: middle;
+        letter-spacing: 0.04em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ==================== HEADER ==================== -->
+    <header>
+      <div class="header-brand">
+        <span class="header-icon" aria-hidden="true">♔</span>
+        <div>
+          <p class="site-title">The Royal Game</p>
+          <p class="site-subtitle">A Comprehensive Journey Through Chess</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav aria-label="Main site navigation">
+      <ul>
+        <li>
+          <a href="index.html" class="active" aria-current="page">Home</a>
+        </li>
+        <li><a href="timeline.html">History Timeline</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <span class="chess-decoration" aria-hidden="true">♟</span>
+        <h1 id="hero-heading">The Game of Kings</h1>
+        <h2>Fifteen centuries of strategy, sacrifice, and brilliance</h2>
+        <p>
+          Chess is more than a board game — it is a mirror of the human mind, a
+          language spoken across cultures and centuries, and an art form that
+          has captivated humanity since the age of empires. From the dusty
+          courts of the Gupta dynasty to the neural networks of artificial
+          intelligence, the game endures: 64 squares, 32 pieces, infinite
+          possibility.
+        </p>
+      </section>
+
+      <!-- ORIGINS OF CHESS SECTION -->
+      <section id="origins" aria-labelledby="origins-heading">
+        <h2 id="origins-heading">The Origins of Chess</h2>
+
+        <article>
+          <h3>Chaturanga: The Ancient Indian Ancestor</h3>
+          <p>
+            Chess traces its origins to the Indian subcontinent, where a game
+            called
+            <em>Chaturanga</em> meaning "four divisions" in Sanskrit was played
+            as early as the 6th century AD during the reign of the Gupta Empire.
+            The four divisions referred to the four branches of the ancient
+            Indian military: infantry (foot soldiers), cavalry (horses), war
+            elephants, and chariots. These became the pieces we recognise today
+            as pawns, knights, bishops, and rooks. The game was played on an 8×8
+            grid called the <em>ashtāpada</em>, and its objective to
+            incapacitate the opposing king — has remained unchanged across
+            fifteen centuries of evolution and global travel.
+          </p>
+
+          <!-- FIGURE: Chess set image -->
+          <figure>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/800px-ChessSet.jpg"
+              alt="A classic Staunton chess set arranged on a checkered board, showing all pieces in their starting positions"
+              width="800"
+              height="533"
+            />
+            <figcaption>
+              A classic Staunton chess set — the internationally standardised
+              design adopted in 1849. Photo: Alan Light /
+              <a
+                href="https://commons.wikimedia.org/wiki/File:ChessSet.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Wikimedia Commons
+              </a>
+              (Public Domain).
+            </figcaption>
+          </figure>
+
+          <h3>From Persia to the Arab World: Shatranj</h3>
+          <p>
+            When chess migrated westward into the Sasanian Persian Empire around
+            the 7th century AD, it underwent its first major cultural
+            transformation. The Persians called it
+            <em>Shatranj</em> and adapted the pieces and nomenclature to their
+            own traditions. Persian literature of the era is rich with chess
+            references the game was a pastime of royalty, a proving ground of
+            intellect and strategic thinking. Following the Arab conquest of
+            Persia in the mid-7th century, Shatranj swept through the Islamic
+            world with remarkable speed. Arab scholars produced extensive
+            treatises on chess theory, and elite players called
+            <em>aliyat</em> were celebrated figures at courts from Baghdad to
+            Cordoba. The great mathematician al-Adli and others recorded
+            thousands of game positions, laying the foundations of formal chess
+            analysis centuries before the modern era.
+          </p>
+
+          <h3>Chess Enters Europe: A Medieval Revolution</h3>
+          <p>
+            Chess entered Europe through multiple channels during the 9th and
+            10th centuries. The Moors brought the game to the Iberian Peninsula,
+            where it flourished among both Muslim and Christian courts. It
+            spread northward via trade routes and crusader contacts, reaching
+            France, England, Germany, and Scandinavia by around 1000 AD. The
+            Lewis Chessmen extraordinary figures carved from walrus ivory around
+            1150–1200 AD and discovered on the Isle of Lewis, Scotland stand as
+            some of the most evocative early European chess artifacts, their
+            expressive, medieval faces capturing a moment when chess was
+            becoming deeply woven into European culture. The pivotal
+            transformation of the game came in the late 15th century in Spain
+            and Italy: the queen, previously a weak piece, became the most
+            powerful on the board; bishops gained their long diagonal range; and
+            pawns earned the option of an initial two-square advance. These
+            changes dramatically accelerated the game and gave birth to the
+            modern chess we play today.
+          </p>
+
+          <!-- CHESS FACT BOX (uses the embedded style defined above) -->
+          <div class="chess-fact-box">
+            <span class="fact-label">&#9812; Etymology: Did You Know?</span>
+            The word "checkmate" derives from the Persian phrase
+            <em>shāh māt</em> (شاه مات), meaning "the king is helpless" or "the
+            king is dead." As chess passed through Arabic into Old French —
+            <em>eschec mat</em> and then into Middle English, the phrase
+            gradually transformed into the "checkmate" we declare today when the
+            king has no escape.
+          </div>
+
+          <p>
+            The modern rules that crystallised in 15th-century Europe spread
+            rapidly via printed chess manuals one of the earliest uses of the
+            printing press for educational content. Within decades, chess theory
+            began to be documented systematically: openings were named, tactical
+            patterns catalogued, and endgame techniques refined. This body of
+            knowledge has grown continuously ever since, through the Romantic
+            era of combinational brilliance, the positional revolution of
+            Steinitz, the Soviet chess machine of the Cold War, and today's
+            computer-assisted super-grandmaster preparation. Explore over one
+            million historical games at
+            <a
+              href="https://www.chessgames.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >ChessGames.com</a
+            >.
+          </p>
+        </article>
+      </section>
+
+      <!-- BIOGRAPHY SECTION -->
+      <section id="biography" aria-labelledby="bio-heading">
+        <h2 id="bio-heading">Magnus Carlsen: The Mozart of Chess</h2>
+
+        <article>
+          <h3>Early Life and the Road to Grandmaster</h3>
+          <p>
+            Magnus Carlsen was born on November 30, 1990, in Tønsberg, Norway,
+            and exhibited an astonishing aptitude for chess from the moment he
+            learned the game at age eight. His father, Henrik, introduced him to
+            chess during a family road trip, and Magnus absorbed its principles
+            with supernatural speed. By 13, he earned the title of
+            <!-- INLINE STYLE: highlights a key term with the site's gold accent colour -->
+            <span style="color: #a57a28; font-weight: bold"
+              >International Grandmaster</span
+            >
+            one of the youngest players in history to achieve this distinction
+            following a remarkable draw against reigning World Champion Garry
+            Kasparov in the 2004 Reykjavík Rapid. The chess world immediately
+            sensed it was witnessing something exceptional. By 2009, Carlsen had
+            reached the world number-one ranking for the first time, at just 18
+            years old, displacing Veselin Topalov — the youngest player ever to
+            top the FIDE world rankings.
+          </p>
+
+          <h3>World Champion and Statistical Dominance</h3>
+          <p>
+            Carlsen claimed the World Chess Championship in 2013, defeating
+            Viswanathan Anand in Chennai, India, with composed, suffocating
+            positional play. He successfully defended the title in 2014, 2016,
+            2018, and 2021 holding the championship for a full decade. What
+            distinguished Carlsen was not merely the consistency of his
+            victories but the manner and breadth of his dominance. He was famed
+            for his exceptional endgame technique, grinding out victories from
+            positions that any other player would have accepted as drawn —
+            earning him the nickname "The Endgame Monster." His peak FIDE
+            classical rating of
+            <strong>2882</strong
+            ><span class="rating-badge">FIDE 2882</span> remains the highest
+            ever recorded in chess history, surpassing the previous record of
+            2851 held by Garry Kasparov. Across blitz and rapid chess, Carlsen
+            simultaneously held all three world championship titles — an
+            unprecedented triple crown.
+          </p>
+
+          <h3>Style, Legacy, and Cultural Impact</h3>
+          <p>
+            Carlsen's playing style is famously universal and adaptive. Unlike
+            many champions who favoured razor-sharp theoretical battles, he has
+            expressed a preference for complex, unbalanced positions where his
+            superior understanding and stamina can prevail over his opponents'
+            preparation. He combines Karpov's ruthless positional squeeze with
+            Kasparov's competitive fire and a technical endgame mastery that
+            many consider unequalled in chess history. Beyond tournament
+            results, Carlsen profoundly reshaped chess culture. He founded the
+            Chess24 platform, launched the Magnus Carlsen Chess Tour during the
+            2020 pandemic, and drew millions of new fans to the game riding a
+            wave of enthusiasm catalysed by Netflix's
+            <em>The Queen's Gambit</em>. In 2022, controversially, he chose not
+            to defend his classical World Championship title, citing
+            insufficient motivation a decision that stunned the chess world but
+            underscored his absolute dominance of the game for an entire
+            generation.
+          </p>
+        </article>
+
+        <div class="quote-box">
+          "I am trying to beat the guy sitting across from me and trying to
+          choose the move that makes him most uncomfortable."
+          <cite>— Magnus Carlsen</cite>
+        </div>
+      </section>
+
+      <!-- WORLD CHAMPIONS TABLE SECTION -->
+      <section id="champions" aria-labelledby="champions-heading">
+        <h2 id="champions-heading">World Chess Champions</h2>
+        <p>
+          The following table lists the official World Chess Champions since the
+          inaugural championship match in 1886, when the title became a formally
+          contested distinction between Wilhelm Steinitz and Johannes Zukertort.
+        </p>
+
+        <table>
+          <caption>
+            Official World Chess Champions, 1886–Present
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Champion</th>
+              <th scope="col">Country</th>
+              <th scope="col">Years Held</th>
+              <th scope="col">Notable Distinction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Wilhelm Steinitz</td>
+              <td>Austria / USA</td>
+              <td>1886–1894</td>
+              <td>
+                First official World Champion; founder of modern positional
+                theory
+              </td>
+            </tr>
+            <tr>
+              <td>Emanuel Lasker</td>
+              <td>Germany</td>
+              <td>1894–1921</td>
+              <td>Longest reign in history — 27 consecutive years</td>
+            </tr>
+            <tr>
+              <td>José Raúl Capablanca</td>
+              <td>Cuba</td>
+              <td>1921–1927</td>
+              <td>
+                Lost only 34 games in his entire career; legendary technique
+              </td>
+            </tr>
+            <tr>
+              <td>Alexander Alekhine</td>
+              <td>France</td>
+              <td>1927–1935, 1937–1946</td>
+              <td>Only champion to die while still holding the title</td>
+            </tr>
+            <tr>
+              <td>Mikhail Botvinnik</td>
+              <td>USSR</td>
+              <td>1948–1963</td>
+              <td>
+                Architect of the Soviet Chess School; three separate
+                championship reigns
+              </td>
+            </tr>
+            <tr>
+              <td>Tigran Petrosian</td>
+              <td>USSR</td>
+              <td>1963–1969</td>
+              <td>"Iron Tigran" — defensive genius renowned for prophylaxis</td>
+            </tr>
+            <tr>
+              <td>Boris Spassky</td>
+              <td>USSR</td>
+              <td>1969–1972</td>
+              <td>
+                Versatile champion; lost the legendary "Match of the Century" to
+                Fischer
+              </td>
+            </tr>
+            <tr>
+              <td>Bobby Fischer</td>
+              <td>United States</td>
+              <td>1972–1975</td>
+              <td>
+                First (and only) American World Champion; won 20 consecutive
+                tournament games
+              </td>
+            </tr>
+            <tr>
+              <td>Anatoly Karpov</td>
+              <td>USSR / Russia</td>
+              <td>1975–1985</td>
+              <td>
+                Won 160+ tournaments; played five epic championship matches
+                against Kasparov
+              </td>
+            </tr>
+            <tr>
+              <td>Garry Kasparov</td>
+              <td>USSR / Russia</td>
+              <td>1985–2000</td>
+              <td>
+                Held the world number-one ranking for 255 months; considered the
+                greatest ever
+              </td>
+            </tr>
+            <tr>
+              <td>Vladimir Kramnik</td>
+              <td>Russia</td>
+              <td>2000–2007</td>
+              <td>
+                Dethroned Kasparov using the "Berlin Defense"; unified the split
+                title in 2006
+              </td>
+            </tr>
+            <tr>
+              <td>Viswanathan Anand</td>
+              <td>India</td>
+              <td>2007–2013</td>
+              <td>
+                Five-time World Champion; Asia's first and most celebrated chess
+                superstar
+              </td>
+            </tr>
+            <tr>
+              <td>Magnus Carlsen</td>
+              <td>Norway</td>
+              <td>2013–2023</td>
+              <td>
+                Peak FIDE rating of 2882 — the highest rating in chess history
+              </td>
+            </tr>
+            <tr>
+              <td>Ding Liren</td>
+              <td>China</td>
+              <td>2023–present</td>
+              <td>
+                First Chinese World Champion; won the 2023 championship match
+                against Nepomniachtchi
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- FAMOUS OPENINGS SECTION -->
+      <section id="openings" aria-labelledby="openings-heading">
+        <h2 id="openings-heading">Famous Chess Openings</h2>
+        <p>
+          Chess openings are the initial sequences of moves that establish the
+          strategic character of the game. Over five centuries, grandmasters and
+          theorists have named and analysed hundreds of distinct openings. The
+          most influential and frequently played include:
+        </p>
+
+        <ul class="opening-list">
+          <li>
+            <strong>Sicilian Defense</strong>
+            1. e4 c5 — The most popular response to 1. e4. Creates an
+            asymmetrical position offering Black rich counterattacking chances
+            on the queenside.
+          </li>
+          <li>
+            <strong>Queen's Gambit</strong>
+            1. d4 d5 2. c4 — A classical opening where White offers a pawn to
+            gain central control. Beloved by world champions from Capablanca to
+            Carlsen.
+          </li>
+          <li>
+            <strong>Ruy López (Spanish Game)</strong>
+            1. e4 e5 2. Nf3 Nc6 3. Bb5 — One of the oldest and most deeply
+            analysed openings, named after the 16th-century Spanish priest who
+            documented it.
+          </li>
+          <li>
+            <strong>King's Indian Defense</strong>
+            1. d4 Nf6 2. c4 g6 — A hyper-modern defence. Black cedes the centre
+            then launches a fierce counterattack. Championed by Fischer and
+            Kasparov.
+          </li>
+          <li>
+            <strong>French Defense</strong>
+            1. e4 e6 — A solid, strategic choice. Black erects a sturdy pawn
+            chain and seeks queenside counterplay, at the cost of some early
+            passivity.
+          </li>
+          <li>
+            <strong>Caro-Kann Defense</strong>
+            1. e4 c6 — A dependable defense favoured by positional players.
+            Black achieves a healthy pawn structure and often a comfortable
+            endgame.
+          </li>
+          <li>
+            <strong>English Opening</strong>
+            1. c4 — A flexible flank opening allowing White to steer toward many
+            pawn structures and strategic systems, often transposing into d4
+            lines.
+          </li>
+          <li>
+            <strong>Nimzo-Indian Defense</strong>
+            1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 — Black pins White's knight to limit
+            central expansion. A highly principled opening with a rich
+            theoretical body.
+          </li>
+          <li>
+            <strong>Grünfeld Defense</strong>
+            1. d4 Nf6 2. c4 g6 3. Nc3 d5 — Black allows a strong White centre,
+            then immediately attacks it with pieces. Bobby Fischer's weapon of
+            choice against 1. d4.
+          </li>
+          <li>
+            <strong>Italian Game</strong>
+            1. e4 e5 2. Nf3 Nc6 3. Bc4 — One of the oldest recorded openings in
+            chess literature, aiming at the sensitive f7 square and rapid
+            development.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <p>Created for a Web Development Assignment &middot; 2026</p>
+      <p>
+        Content is for educational purposes only.
+        <a href="resources.html">View Sources &amp; References</a>
+      </p>
+    </footer>
+  </body>
+</html>

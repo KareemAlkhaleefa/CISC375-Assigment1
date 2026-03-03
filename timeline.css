@@ -1,0 +1,249 @@
+/* ============================================
+   CHESS HISTORY TIMELINE
+   Alternating vertical timeline component.
+   Design inspired by Alvaro Trigo's CSS timeline examples:
+   https://alvarotrigo.com/blog/html-css-timelines/
+   ============================================ */
+
+/* ============================================
+   TIMELINE CONTAINER
+   ============================================ */
+.timeline {
+  position: relative;
+  max-width: 980px;
+  margin: 2.5rem auto 0;
+  padding: 1rem 0 4rem;
+}
+
+/* Central vertical connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #c9a84c;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* ============================================
+   TIMELINE ITEMS
+   ============================================ */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding-bottom: 3.5rem;
+}
+
+/* Odd items — LEFT side */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 4rem;
+  padding-left: 1rem;
+}
+
+/* Even items — RIGHT side */
+.timeline-item:nth-child(even) {
+  left: 50%;
+  padding-left: 4rem;
+  padding-right: 1rem;
+}
+
+/* ============================================
+   MILESTONE CIRCLE DOTS
+   ============================================ */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 1.35rem;
+  width: 20px;
+  height: 20px;
+  background-color: #c9a84c;
+  border: 4px solid #0d1b2a;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Left items: circle on RIGHT edge (center line) */
+.timeline-item:nth-child(odd)::before {
+  right: -10px;
+}
+
+/* Right items: circle on LEFT edge (center line) */
+.timeline-item:nth-child(even)::before {
+  left: -10px;
+}
+
+/* Circle hover effect */
+.timeline-item:hover::before {
+  background-color: #ffffff;
+  transform: scale(1.4);
+  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.35);
+}
+
+/* ============================================
+   TIMELINE CONTENT CARDS
+   ============================================ */
+.timeline-content {
+  background-color: #ffffff;
+  border: 1px solid rgba(201, 168, 76, 0.22);
+  border-top: 4px solid #c9a84c;
+  padding: 1.6rem 1.75rem;
+  box-shadow: 0 3px 20px rgba(13, 27, 42, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(13, 27, 42, 0.14);
+}
+
+/* Arrow connector — LEFT items point RIGHT (toward center) */
+.timeline-item:nth-child(odd) .timeline-content::after {
+  content: '';
+  position: absolute;
+  top: 1.55rem;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 10px solid #ffffff;
+}
+
+/* Arrow connector — RIGHT items point LEFT (toward center) */
+.timeline-item:nth-child(even) .timeline-content::after {
+  content: '';
+  position: absolute;
+  top: 1.55rem;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 10px solid #ffffff;
+}
+
+/* ============================================
+   CARD TYPOGRAPHY
+   ============================================ */
+.timeline-era {
+  display: inline-block;
+  background-color: #0d1b2a;
+  color: #c9a84c;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  margin-bottom: 0.6rem;
+  font-family: 'Lora', Georgia, serif;
+}
+
+.timeline-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #c9a84c;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
+}
+
+.timeline-event-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-desc {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.88rem;
+  color: #333;
+  line-height: 1.72;
+}
+
+/* ============================================
+   DESKTOP TEXT ALIGNMENT
+   ============================================ */
+@media (min-width: 769px) {
+  .timeline-item:nth-child(odd) {
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-era {
+    float: right;
+    clear: right;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-year,
+  .timeline-item:nth-child(odd) .timeline-event-title {
+    text-align: right;
+  }
+
+  /* Clear the float after the era badge */
+  .timeline-item:nth-child(odd) .timeline-year {
+    clear: both;
+  }
+
+  .timeline-item:nth-child(even) {
+    text-align: left;
+  }
+}
+
+/* ============================================
+   MOBILE — Stack vertically, all on right side
+   ============================================ */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 22px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 62px !important;
+    padding-right: 1rem !important;
+    text-align: left !important;
+  }
+
+  .timeline-item::before {
+    left: 12px !important;
+    right: auto !important;
+  }
+
+  /* On mobile, all arrows point left (from right side toward the left line) */
+  .timeline-item:nth-child(odd) .timeline-content::after {
+    right: auto;
+    left: -10px;
+    border-left: none;
+    border-right: 10px solid #ffffff;
+  }
+
+  .timeline-item:nth-child(odd) {
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-era {
+    float: none;
+    clear: none;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-year,
+  .timeline-item:nth-child(odd) .timeline-event-title {
+    text-align: left;
+  }
+
+  .timeline-year {
+    font-size: 1.4rem;
+  }
+}
